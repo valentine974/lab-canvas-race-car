@@ -1,6 +1,8 @@
 body {
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .game-intro {
