@@ -19,6 +19,14 @@ const myGameArea = {
   stop: function () {
     clearInterval(this.interval);
   },
+
+  score: function () {
+    const points = Math.floor(this.frames / 180);
+    this.context.font = '18px serif';
+    this.context.fillStyle = 'white';
+    this.context.fillText(`Score: ${points}`, 350, 50);
+  },
+
 };
 
 class Component {
@@ -129,6 +137,7 @@ function updateGameArea() {
   car.update();
   updateObstacles(); 
   checkGameOver();
+  myGameArea.score();
 }
 
 function updateObstacles() {
